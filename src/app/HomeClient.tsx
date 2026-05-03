@@ -327,7 +327,7 @@ export default function HomeClient() {
                 {clientLogos.map((logo, i) => (
                   <div
                     key={`${setIndex}-${i}`}
-                    className="relative h-12 sm:h-16 w-28 sm:w-40 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100"
+                    className="relative h-12 sm:h-16 w-28 sm:w-40 transition-all duration-300 opacity-80 hover:opacity-100"
                   >
                     <Image
                       src={logo.src}

@@ -3,7 +3,7 @@ import { Barlow_Condensed, Lato } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import CustomCursor from "@/components/CustomCursor";
+
 import ScrollProgress from "@/components/ScrollProgress";
 import PageTransition from "@/components/PageTransition";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -56,6 +56,10 @@ export const metadata: Metadata = {
     telephone: true,
     date: true,
     address: true,
+  },
+  icons: {
+    icon: "/favicon.svg",
+    apple: "/favicon.svg",
   },
   alternates: {
     canonical: "/",
@@ -139,8 +143,7 @@ export default function RootLayout({
         <LocalBusinessSchema />
         <WebSiteSchema />
       </head>
-      <body className="min-h-full flex flex-col custom-cursor-active">
-        <CustomCursor />
+      <body className="min-h-full flex flex-col">
         <ScrollProgress />
         <Navbar />
         <PageTransition>

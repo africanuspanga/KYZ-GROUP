@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Dark circular background -->
+  <circle cx="50" cy="50" r="48" fill="#1a1a1a" stroke="#cc1a1a" stroke-width="3"/>
+  
+  <!-- Red arc accent -->
+  <path d="M 50 8 A 42 42 0 0 1 92 50" stroke="#cc1a1a" stroke-width="6" fill="none" stroke-linecap="round"/>
+  
+  <!-- KYZ text -->
+  <text x="50" y="58" text-anchor="middle" fill="#ffffff" font-family="Arial Black, sans-serif" font-weight="900" font-size="28" letter-spacing="1">KYZ</text>
+  
+  <!-- Small cross/plus symbol representing medical/supply -->
+  <rect x="44" y="66" width="12" height="4" rx="1" fill="#cc1a1a"/>
+  <rect x="48" y="62" width="4" height="12" rx="1" fill="#cc1a1a"/>
+</svg>

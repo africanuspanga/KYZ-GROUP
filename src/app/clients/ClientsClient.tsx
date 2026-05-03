@@ -62,7 +62,7 @@ export default function ClientsClient() {
           <AnimatedStagger className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-8" staggerDelay={0.1}>
             {clientLogos.map((logo, i) => (
               <AnimatedItem key={i}>
-                <div className="aspect-[3/2] bg-[#fafafa] border border-[#e0e0e0] rounded-lg flex items-center justify-center p-4 sm:p-6 hover:border-[#cc1a1a]/30 transition-colors">
+                <div className="aspect-[3/2] bg-white border border-[#e0e0e0] rounded-lg flex items-center justify-center p-4 sm:p-6 hover:border-[#cc1a1a]/30 transition-colors hover:shadow-md">
                   <div className="relative w-full h-full">
                     <Image
                       src={logo.src}

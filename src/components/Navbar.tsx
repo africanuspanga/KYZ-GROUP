@@ -2,10 +2,10 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown } from "lucide-react";
-import Logo from "./Logo";
 import { services } from "@/lib/services";
 
 const navLinks = [
@@ -38,7 +38,10 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Close mobile menu when pathname changes (handled via key prop re-render)
+  useEffect(() => {
+    setMobileOpen(false);
+    setServicesOpen(false);
+  }, [pathname]);
 
   const isActive = (href: string) => {
     if (href === "/") return pathname === "/";
@@ -56,17 +59,18 @@ export default function Navbar() {
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10">
-          <div className="flex items-center justify-between h-18 sm:h-20">
+          <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-3">
-              <Logo size={40} light />
-              <div className="hidden sm:block">
-                <span className="font-[var(--font-barlow-condensed)] font-black text-base sm:text-lg leading-tight tracking-tight text-white">
-                  KYZ (T) GROUP
-                </span>
-                <span className="block text-[10px] tracking-[0.2em] text-[#cc1a1a] font-[var(--font-barlow-condensed)] font-bold uppercase">
-                  Limited
-                </span>
+            <Link href="/" className="flex items-center">
+              <div className="relative h-12 sm:h-14 w-auto aspect-[1049/707]">
+                <Image
+                  src="/navbar-logo.png"
+                  alt="KYZ (T) GROUP LIMITED"
+                  fill
+                  className="object-contain"
+                  priority
+                  unoptimized
+                />
               </div>
             </Link>
 
@@ -169,7 +173,16 @@ export default function Navbar() {
             transition={{ duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
           >
             <div className="flex items-center justify-between p-4">
-              <Logo size={40} light />
+              <div className="relative h-10 w-auto aspect-[1049/707]">
+                <Image
+                  src="/navbar-logo.png"
+                  alt="KYZ (T) GROUP LIMITED"
+                  fill
+                  className="object-contain"
+                  priority
+                  unoptimized
+                />
+              </div>
               <button
                 className="p-2 text-white"
                 onClick={() => setMobileOpen(false)}
