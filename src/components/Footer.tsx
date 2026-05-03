@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import Logo from "./Logo";
+import Image from "next/image";
 import { services } from "@/lib/services";
 import { Phone, Mail, MapPin, Globe, Share2, MessageCircle, ExternalLink } from "lucide-react";
 
@@ -26,10 +26,15 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Column 1: Logo + Tagline */}
           <div>
-            <Logo size={56} light />
-            <h3 className="mt-4 font-[var(--font-barlow-condensed)] font-black text-xl uppercase tracking-tight">
-              KYZ (T) GROUP LIMITED
-            </h3>
+            <div className="relative h-14 w-auto aspect-[1049/707]">
+              <Image
+                src="/footer-logo.png"
+                alt="KYZ (T) GROUP LIMITED"
+                fill
+                className="object-contain"
+                unoptimized
+              />
+            </div>
             <p className="mt-3 text-[#888888] text-sm leading-relaxed">
               East Africa&apos;s leading provider of sanitation, safety, security, and medical equipment supply and distribution.
             </p>
