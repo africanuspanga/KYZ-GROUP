@@ -10,8 +10,7 @@ const quickLinks = [
   { href: "/services/", label: "Services" },
   { href: "/clients/", label: "Our Clients" },
   { href: "/why-us/", label: "Why Choose KYZ" },
-  { href: "/leadership/", label: "Leadership" },
-  { href: "/certifications/", label: "Certifications" },
+
   { href: "/contact/", label: "Contact" },
   { href: "/gallery/", label: "Gallery" },
 ];

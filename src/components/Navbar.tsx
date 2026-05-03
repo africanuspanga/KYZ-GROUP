@@ -18,8 +18,7 @@ const navLinks = [
   },
   { href: "/clients/", label: "Clients" },
   { href: "/why-us/", label: "Why Us" },
-  { href: "/leadership/", label: "Leadership" },
-  { href: "/certifications/", label: "Certifications" },
+
   { href: "/contact/", label: "Contact" },
 ];
 

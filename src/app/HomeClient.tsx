@@ -571,24 +571,37 @@ export default function HomeClient() {
         </div>
       </section>
 
-      {/* Certifications Bar */}
-      <section className="py-12 sm:py-16 bg-[#f0f0f0]">
+      {/* Certifications */}
+      <section className="py-16 sm:py-20 bg-[#f0f0f0]">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10">
-          <AnimatedStagger className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6" staggerDelay={0.1}>
+          <AnimatedSection>
+            <div className="text-center mb-10 sm:mb-12">
+              <h2
+                className="font-[var(--font-barlow-condensed)] font-black uppercase tracking-tight text-[#1a1a1a] leading-[1.1]"
+                style={{ fontSize: "clamp(1.75rem, 4vw, 3rem)" }}
+              >
+                Certifications & Compliance
+              </h2>
+              <div className="h-1 bg-[#cc1a1a] mt-4 mx-auto w-16" />
+            </div>
+          </AnimatedSection>
+          <AnimatedStagger className="grid sm:grid-cols-3 gap-6 sm:gap-8" staggerDelay={0.15}>
             {[
-              { label: "WHO", desc: "Health Standards" },
-              { label: "OSHA", desc: "Safety Compliance" },
-              { label: "ISO", desc: "Quality Certified" },
-              { label: "Registered", desc: "Licensed Business" },
+              { src: "/cert-1.png", alt: "KYZ Certification 1" },
+              { src: "/cert-2.png", alt: "KYZ Certification 2" },
+              { src: "/cert-3.png", alt: "KYZ Certification 3" },
             ].map((cert) => (
-              <AnimatedItem key={cert.label}>
-                <div className="flex flex-col items-center text-center p-4 sm:p-6">
-                  <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full border-2 border-dashed border-[#888888] flex items-center justify-center bg-white">
-                    <span className="font-[var(--font-barlow-condensed)] font-black text-lg sm:text-xl text-[#1a1a1a]">
-                      {cert.label}
-                    </span>
+              <AnimatedItem key={cert.src}>
+                <div className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300 border border-[#e0e0e0]">
+                  <div className="relative aspect-[3/4] bg-[#fafafa]">
+                    <Image
+                      src={cert.src}
+                      alt={cert.alt}
+                      fill
+                      className="object-contain p-4 sm:p-6"
+                      unoptimized
+                    />
                   </div>
-                  <p className="mt-2 sm:mt-3 text-xs sm:text-sm text-[#888888]">{cert.desc}</p>
                 </div>
               </AnimatedItem>
             ))}
