@@ -140,7 +140,7 @@ export default function ServiceDetailClient({ service }: { service: Service }) {
 
               <AnimatedSection delay={0.2}>
                 <h2 className="mt-10 sm:mt-12 font-[var(--font-barlow-condensed)] font-bold text-xl sm:text-2xl uppercase tracking-tight text-[#1a1a1a]">
-                  Who It's For
+                  Who It&apos;s For
                 </h2>
                 <div className="mt-5 sm:mt-6 flex flex-wrap gap-2 sm:gap-3">
                   {service.clients.map((client) => (

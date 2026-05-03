@@ -126,7 +126,7 @@ export default function AboutClient() {
                   </p>
                   <p>
                     Every product in our catalog is sourced from certified manufacturers and undergoes
-                    strict quality verification. We don't just move goods; we deliver peace of mind.
+                    strict quality verification. We don&apos;t just move goods; we deliver peace of mind.
                   </p>
                 </div>
               </div>

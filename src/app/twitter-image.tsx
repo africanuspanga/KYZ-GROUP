@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 export const dynamic = "force-static";
 
-export const alt = "KYZ (T) GROUP LIMITED — East Africa's Trusted Supply Partner";
+export const alt = "KYZ (T) GROUP LIMITED — East Africa&apos;s Trusted Supply Partner";
 export const size = {
   width: 1200,
   height: 630,
@@ -88,7 +88,7 @@ export default function TwitterImage() {
             letterSpacing: "0.1em",
           }}
         >
-          East Africa's Trusted Supply Partner
+          East Africa&apos;s Trusted Supply Partner
         </p>
       </div>
     ),

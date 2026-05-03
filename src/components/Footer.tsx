@@ -31,7 +31,7 @@ export default function Footer() {
               KYZ (T) GROUP LIMITED
             </h3>
             <p className="mt-3 text-[#888888] text-sm leading-relaxed">
-              East Africa's leading provider of sanitation, safety, security, and medical equipment supply and distribution.
+              East Africa&apos;s leading provider of sanitation, safety, security, and medical equipment supply and distribution.
             </p>
             <div className="flex gap-3 mt-5">
               {[Globe, Share2, MessageCircle, ExternalLink].map((Icon, i) => (
@@ -127,7 +127,7 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} KYZ (T) GROUP LIMITED. All rights reserved.
           </p>
           <p className="text-[#cc1a1a] text-sm font-[var(--font-barlow-condensed)] font-semibold uppercase tracking-wider">
-            East Africa's Trusted Supply Partner
+            East Africa&apos;s Trusted Supply Partner
           </p>
         </div>
       </div>

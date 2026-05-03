@@ -93,7 +93,7 @@ export default function ServicesClient() {
               Need a Custom Supply Solution?
             </h2>
             <p className="mt-4 text-white/90 max-w-xl mx-auto">
-              Our team will design a tailored package for your organization's specific requirements.
+              Our team will design a tailored package for your organization&apos;s specific requirements.
             </p>
             <Link
               href="/contact/"

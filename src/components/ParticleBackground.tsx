@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 interface Particle {
   id: number;
@@ -11,20 +11,19 @@ interface Particle {
   delay: number;
 }
 
-export default function ParticleBackground() {
-  const [particles, setParticles] = useState<Particle[]>([]);
+function generateParticles(): Particle[] {
+  return Array.from({ length: 30 }, (_, i) => ({
+    id: i,
+    x: Math.random() * 100,
+    y: Math.random() * 100,
+    size: Math.random() * 4 + 2,
+    duration: Math.random() * 20 + 15,
+    delay: Math.random() * 10,
+  }));
+}
 
-  useEffect(() => {
-    const newParticles: Particle[] = Array.from({ length: 30 }, (_, i) => ({
-      id: i,
-      x: Math.random() * 100,
-      y: Math.random() * 100,
-      size: Math.random() * 4 + 2,
-      duration: Math.random() * 20 + 15,
-      delay: Math.random() * 10,
-    }));
-    setParticles(newParticles);
-  }, []);
+export default function ParticleBackground() {
+  const [particles] = useState<Particle[]>(generateParticles);
 
   return (
     <div className="absolute inset-0 -z-10 overflow-hidden">

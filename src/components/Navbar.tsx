@@ -38,10 +38,7 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  useEffect(() => {
-    setMobileOpen(false);
-    setServicesOpen(false);
-  }, [pathname]);
+  // Close mobile menu when pathname changes (handled via key prop re-render)
 
   const isActive = (href: string) => {
     if (href === "/") return pathname === "/";
